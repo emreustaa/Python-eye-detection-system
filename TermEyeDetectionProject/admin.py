@@ -4,12 +4,12 @@ from firebase_admin import db
 
 from firebase_admin import *
 
-credentials = credentials.Certificate('firebase-sdk.json')
 
-firebase_admin.initialize_app(credentials, {'databaseURL': 'https://goztakibi-e3cac.firebaseio.com//'})
 
-ref = db.reference('/Kullanicilar')
-ref2 = db.reference('/Sayac')
+firebase_admin.initialize_app(credentials, {'databaseURL': 'url'})
+
+ref = db.reference(path')
+ref2 = db.reference('')
 
 
 def addData(ad, soyad, kullaniciAdi, sifre, mail):
@@ -39,19 +39,19 @@ def sendTime(timer):
     )
 
 def get_username():
-    results = db.reference('/Kullanicilar/', None).get()
+    results = db.reference('/path/', None).get()
 
     for id in results:
-        username = results[id]['kullaniciAdi']
+        username = results[id]['path']
 
     return username
 
 
 def get_password():
-    results = db.reference('/Kullanicilar/', None).get()
+    results = db.reference('/path/', None).get()
 
     for passwords in results:
-        password = results[passwords]['sifre']
+        password = results[passwords]['path']
 
     return password
 
